@@ -1,0 +1,83 @@
+body {
+    font-family: Times New Roman;
+}
+
+h1 {
+    color: black;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+    font-size: 40px;
+}
+
+h3 {
+    color: black;
+    font-size: 20px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+#chatbox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 60px;
+}
+
+#userInput {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 60px;
+}
+
+#textInput {
+    width: 87%;
+    border: none;
+    border-bottom: 3px solid #009688;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+#buttonInput {
+    padding: 3px;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.userText {
+   background-color: #015cda;
+    font-family: monospace;
+    font-size: 15px;
+    text-align: right;
+    line-height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.06);
+    float: rights;
+}
+
+.userText span {
+    background-color: #015cda;
+    padding: 10px;
+}
+
+.botText {
+    background-color: rgba(0,0,0,.06);
+    font-family: monospace;
+    font-size: 15px;
+    text-align: left;
+    line-height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.06);
+    float: left;
+}
+
+
+#tidbit {
+    position:absolute;
+    bottom:0;
+    right:0;
+    width: 300px;
+}
