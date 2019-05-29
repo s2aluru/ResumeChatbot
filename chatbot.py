@@ -6,12 +6,12 @@ class Chatbot:
 
     def __init__(self, nomatch, qafile, thankyou):
         self.nomatch = nomatch
+        self.qafile =   qafile
         self.thankyou = thankyou
-        self.qafile = qafile
         self.logfile = 'chat.log'
 
     def run_bot(self):
-        qadata = pd.read_csv(self.qafile)
+        qadata = pd.read_csv(self.qafile, skipinitialspace = True, quotechar = '"')
         self.questions = qadata['Question']
         self.answers = qadata['Answer']
 
