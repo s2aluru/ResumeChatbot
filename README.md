@@ -1,2 +1,2 @@
 # ResumeChatbot
-Developed a Chatbot for my resume using Flask, Python, NLP, to test the web application I hosted this project on my personal Azure website.
+Developed a Chatbot for my resume using Flask, Python, NLP, I hosted the web applicationon my personal Azure website for testing.
