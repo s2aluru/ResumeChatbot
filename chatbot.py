@@ -1,16 +1,15 @@
 import pandas as pd
-import os, shutil, datetime
+import os, shutil, datetime, random
 from difflib import SequenceMatcher
 import nltk
-nltk.download('stopwords')
-nltk.download('averaged_perceptron_tagger')
-nltk.download('wordnet')
 from nltk.stem.snowball import SnowballStemmer
-import random
 from nltk.classify import SklearnClassifier
 from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import stopwords
 from nltk.stem.wordnet import WordNetLemmatizer
+nltk.download('stopwords')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('wordnet')
 
 class Chatbot:
 
@@ -89,13 +88,10 @@ class Chatbot:
         # The responses of the chat bot
         answers = {}
         for (text,category,answer) in data:
-
             features = extract_feature(text)
-
             corpus.append(features)
             result.append((word_feats(features), category))
             answers[category] = answer
-
         return (result, sum(corpus,[]), answers)
     
     def extract_feature_from_doc(self, data):
@@ -104,14 +100,11 @@ class Chatbot:
         # The responses of the chat bot
         answers = {}
         for (text,category,answer) in data:
-
             features = extract_feature(text)
-
             corpus.append(features)
             result.append((word_feats(features), category))
             answers[category] = answer
-
-    return (result, sum(corpus,[]), answers)
+        return (result, sum(corpus,[]), answers)
 
     def run_ml_based_bot(self, input):
         data = get_content(qafile)
