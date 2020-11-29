@@ -94,18 +94,6 @@ class Chatbot:
             answers[category] = answer
         return (result, sum(corpus,[]), answers)
     
-    def extract_feature_from_doc(self, data):
-        result = []
-        corpus = []
-        # The responses of the chat bot
-        answers = {}
-        for (text,category,answer) in data:
-            features = extract_feature(text)
-            corpus.append(features)
-            result.append((word_feats(features), category))
-            answers[category] = answer
-        return (result, sum(corpus,[]), answers)
-
     def run_ml_based_bot(self, input):
         data = get_content(qafile)
         features_data, corpus, answers = extract_feature_from_doc(data)
